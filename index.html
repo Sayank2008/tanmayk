@@ -12,46 +12,21 @@
       background-color: #ffffff;
       color: #333333;
     }
-
     header {
-      background-color: #ff7b00;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: #000000;
       padding: 1em;
       text-align: center;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
-    nav {
-      display: none;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav li {
-      margin-right: 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-    }
-
     header h1 {
       font-size: 1.5em;
     }
-
     main {
-      padding: 20px;
+      padding: 10px;
     }
-
     section {
       background-color: #fff0e3;
       padding: 20px;
@@ -60,22 +35,12 @@
       font-size: 0.9em;
       box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     }
-
     footer {
-      background-color: #ff7b00;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: #000000;
       padding: 1em;
       text-align: center;
     }
-
-    footer button {
-      padding: 10px;
-      color: #ffffff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
     section button.download-btn,
     section button.view-btn {
       background-color: #ff7b00;
@@ -85,74 +50,39 @@
       border: none;
       cursor: pointer;
     }
-
-    @media (max-width: 600px) {
-      nav {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #ff7b00;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      nav.show {
-        display: block;
-      }
-
-      nav ul {
-        flex-direction: column;
-      }
-
-      nav li {
-        margin: 10px 0;
-      }
-
-      .menu-icon {
-        display: block;
-        cursor: pointer;
-      }
-
-      .menu-icon span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: #ffffff;
-        margin: 5px 0;
-      }
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .about-text {
+      flex: 1;
+    }
+    .logo-container {
+      margin-left: 20px; /* Adjust the margin as needed */
     }
   </style>
 </head>
 <body>
   <header>
     <h1>namskar to my webpage!</h1>
-    <div class="menu-icon" id="menuIcon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#profession">Profession</a></li>
-        <li><a href="#download">Download Solutions</a></li>
-        <li><a href="#cprogramming">C Programming</a></li>
-      </ul>
-    </nav>
   </header>
-
   <main>
     <section>
-      <h2>About Me</h2>
-      <p>Welcome to my webpage! I'm currently a student in Class 9 at Sri Sundarmal Modern School, located in the charming town of Sivasagar, Assam. My passion lies in the world of computer technology.</p>
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Welcome to my webpage! I'm currently a student in Class 9 at Sri Sundarmal Modern School, located in the charming town of Sivasagar, Assam. My passion lies in the world of computer technology.</p>
+        </div>
+        <div class="logo-container">
+          <img src="path_to_your_logo.png" alt="Your Logo">
+        </div>
+      </div>
     </section>
-
     <section>
       <h2>Profession</h2>
       <p>I am passionate about coding, exploring the intricacies of software development, and programming languages offer. </p>
     </section>
-
     <section>
       <h2>Download Computer Science Solutions SEBA</h2>
       <p>Solutions of class IX & X Computer Science available here.</p>
@@ -160,7 +90,6 @@
         <button class="download-btn">Click here to download the chapter of that class you want</button>
       </a>
     </section>
-
     <section>
       <h2>C Programming Codes</h2>
       <p>Explore my collection of C programming codes.</p>
@@ -169,16 +98,8 @@
       </a>
     </section>
   </main>
-
   <footer>
     &copy; 2023 T.Karmakar
   </footer>
-
-  <script>
-    document.getElementById("menuIcon").addEventListener("click", function() {
-      var nav = document.querySelector("nav");
-      nav.classList.toggle("show");
-    });
-  </script>
 </body>
 </html>
