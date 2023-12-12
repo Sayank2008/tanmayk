@@ -11,6 +11,17 @@
       padding: 0;
       background-color: #ffffff;
       color: #333333;
+      opacity: 0;
+      animation: fadeIn ease-in-out 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     header {
@@ -34,11 +45,19 @@
       margin-bottom: 20px;
       border-radius: 15px;
       font-size: 0.9em;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     footer {
       background-color: #ffffff00;
-      color: #000000;
+      color: #2a7dc1;
       padding: 1em;
       text-align: center;
     }
@@ -46,10 +65,10 @@
     footer button,
     main button {
       padding: 10px;
-      background-color: #2a7dc1; /* Blue color */
+      background-color: #2a7dc1;
       color: #ffffff;
       border: none;
-      border-radius: 8px; /* Rounded corners */
+      border-radius: 8px;
       cursor: pointer;
     }
 
@@ -71,7 +90,7 @@
   </header>
 
   <main>
-    <section>
+    <section class="animate-on-scroll">
       <h2>Download</h2>
       <p><strong>Solutions for Class IX Computer Science (E-34) SEBA available here.</p>
       <a href="https://drive.google.com/file/d/10VcaITZbP9Ne4A0lBCWRKhp-ODNxImpe/view?usp=drivesdk" download>
@@ -105,7 +124,7 @@
                           <button>Chapter 10</button>
       </a>
     </section>
-    <section>
+    <section class="animate-on-scroll">
       <h2>Download</h2>
       <p><strong>Solutions for Class X Computer Science (E-34) SEBA available here.</p>
       <a href="your_download_link_here" download>
@@ -118,5 +137,32 @@
     <br>
     &copy; 2023 T.Karmakar
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = document.querySelectorAll('.animate-on-scroll');
+
+      const showSections = () => {
+        sections.forEach(section => {
+          if (isElementInViewport(section)) {
+            section.classList.add('show');
+          }
+        });
+      };
+
+      const isElementInViewport = (el) => {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      };
+
+      document.addEventListener('scroll', showSections);
+      showSections(); // Trigger the showSections function once to check the initial state
+    });
+  </script>
 </body>
 </html>
