@@ -34,7 +34,7 @@
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 15px;
-      font-size: 0.9em;
+      font-size: 1em;
       opacity: 0;
       animation: fadeIn 1s ease-in-out forwards;
     }
@@ -80,17 +80,19 @@
   <main>
     <section>
       <h2>Program 1</h2>
-      <p><strong>Description:<strong>This program calculates the sum of two numbers.</p>
+      <p><strong>Description:<strong> This program calculates the sum of two numbers.</p>
       <code><strong>
         #include&lt;stdio.h&gt;<br>
         int main() {<br>
-        &nbsp;&nbsp;int a = 5, b = 10, sum;<br>
-        &nbsp;&nbsp;sum = a + b;<br>
+        &nbsp;&nbsp;int num1 = 5, num2 = 10, sum;<br>
+        &nbsp;&nbsp;sum = num1 + num2;<br>
         &nbsp;&nbsp;printf("Sum: %d", sum);<br>
         &nbsp;&nbsp;return 0;<br>
         }
       </code>
     </section>
+
+
 
     <section>
       <h2>Program 2</h2>
@@ -110,10 +112,201 @@
       </code>
     </section>
 
+    <section>
+      <h2>Program 3</h2>
+      <p><strong>Description:<strong> This program find the greatest from three numbers</p>
+      <code><strong>
+        #include<stdio.h> <br>
+          int main () <br>
+          { <br>
+          int a,b,c; <br>
+          printf("\n \n Enter first number: "); <br>
+          scanf("%d",&a); <br>
+          printf("\n Enter second number: "); <br>
+          scanf("%d",&b); <br>
+          printf("\n Enter third number: "); <br>
+          scanf("%d",&c); <br>
+          if (a>b) <br>
+{ <br>
+if (a>c) <br>
+printf("\n %d is the greater number",a); <br>
+else <br>
+printf("\n %d is the greater number",c); <br>
+} <br>
+else <br>
+{ <br>
+if (b>c) <br>
+printf("\n %d is the greater number",b); <br>
+else <br>
+printf("\n %d is the greater number",c); <br>
+} <br>
+return 0; <br>
+}<br>       
+      </code>
+    </section>
+
+    <section>
+      <h2>Program 4</h2>
+      <p><strong>Description:<strong> This program find greatest of two numbers</p>
+      <code><strong>
+        #include<stdio.h> <br>
+          int main () <br>
+          { <br>
+          int a,b; <br>
+          printf("\nEnter 1st number: "); <br>
+          scanf("%d",&a); <br>
+          printf("\nEnter 2nd number: "); <br>
+          scanf("%d",&b); <br>
+          if (a>b) <br>
+          printf("\n%d is greater",a); <br>
+          else <br>
+          printf("\n%d is greater",b); <br>
+          return 0; <br>
+          } <br>
+      </code>
+    </section>
+
+
+    <section>
+      <h2>Program 5</h2>
+      <p><strong>Description:<strong> This program calculates simple interest</p>
+      <code><strong>
+        #include<stdio.h> <br>
+          int main () <br>
+          { <br>
+          float si,p,r,t; <br>
+          printf("\nEnter principal amount: "); <br>
+          scanf("%f",&p); <br>
+          printf("\nEnter rate of interest: "); <br>
+          scanf("%f",&r); <br>
+          printf("\nEnter no of years: "); <br>
+          scanf("%f",&t); <br>
+          si=p*r*t/100; <br>
+          printf("\n\nThe calculated simple interest is %f\n\n",si); <br>
+          return 0; <br>
+          } <br>
+      </code>
+    </section>
+
+
+    <section>
+      <h2>Program 6</h2>
+      <p><strong>Description:<strong> This program calculates area and circumference of circle</p>
+      <code><strong>
+        #include<stdio.h> <br>
+          int main () <br>
+          { <br>
+          float area, circumference, r; <br>
+          printf("\nProgram to find perimeter of circle\n"); <br>
+          printf("\nEnter radius of the circle:"); <br>
+          scanf("%f",&r); <br>
+          circumference=2*3.14*r; <br>
+          printf("\nThe circumference of the circle is %f", circumference); <br>
+          printf("\n\nProgram to find area of circle\n\n"); <br>
+          printf("\nEnter radius of the circle: "); <br>
+          scanf("%f",&r); <br>
+          area=3.14*r*r; <br>
+          printf("The area of the circle is %f",area); <br>
+          return 0; <br>
+          } <br>
+      </code>
+    </section>
+
+
+    <section>
+      <h2>Program 7</h2>
+      <p><strong>Description:<strong> This program swaps two numbers</p>
+      <code><strong>
+        #include<stdio.h> <br>
+          int main () <br>
+          { <br>
+          int a,b,temp; <br>
+          printf("\nEnter 1st number: "); <br>
+          scanf("%d",&a); <br>
+          printf("\nEnter 2nd number: "); <br>
+          scanf("%d",&b); <br>
+          printf("\nThe numbers before swap are %d and %d",a,b); <br>
+          temp=a; <br>
+          a=b; <br>
+          b=temp; <br>
+          printf("\nThe numbers after swap are %d and %d",a,b); <br>
+          return 0; <br>
+          } <br>
+      </code>
+    </section>
+
+
+    <section>
+      <h2>Program 8</h2>
+      <p><strong>Description:<strong> This program calculate the sum of the digits of a number</p>
+      <code><strong>
+        #include<stdio.h> <br>
+          int main () <br>
+          { <br>
+          int a,b,c,n,sum; <br>
+          printf("\nEnter a 3 digit number: "); <br>
+          scanf("%d",&n); <br>
+          a=n%10; <br>
+          n=n/10; <br>
+          b=n%10; <br>
+          n=n/10; <br>
+          c=n%10; <br>
+          sum=a+b+c; <br>
+          printf("\nThe sum of the digits of entered number is %d",sum); <br>
+          return 0; <br>
+          } <br>
+      </code>
+    </section>
+
+
+    <section>
+      <h2>Program 9</h2>
+      <p><strong>Description:<strong> This program calculate the average of three numbers</p>
+      <code><strong>
+        #include<stdio.h> <br>
+          int main () <br>
+          { <br>
+          int a,b,c,avg; <br>
+          printf("Enter first number:"); <br>
+          scanf("%d",&a); <br>
+          printf("Enter second number:");<br>
+          scanf("%d",&b); <br>
+          printf("Enter third number:"); <br>
+          scanf("%d",&c); <br>
+          avg=(a+b+c)/3; <br>
+          printf("\nThe average of the entered numbers is %d\n",avg); <br>
+          return 0; <br>
+          } <br>
+      </code>
+    </section>
+
+
+  <section>
+    <h2>Program 10</h2>
+      <p><strong>Description:<strong> This program compares two given numbers</p>
+      <code><strong>
+        #include<stdio.h> <br>
+          int main () <br>
+          { <br>
+          int a,b; <br>
+          printf("\nEnter 1st number: "); <br>
+          scanf("%d",&a); <br>
+          printf("\nEnter 2nd number: "); <br>
+          scanf("%d",&b); <br>
+          if (a>b) <br>
+          printf("\n%d is greater",a); <br>
+          else if (b>a) <br>
+          printf("\n%d is greater",b); <br>
+          else if (a==b) <br>
+          printf("\nBoth numbers are equal"); <br>
+          return 0; <br>
+          } <br>
+      </code>
+    </section>
+
     <!-- Add more sections with your C programming codes -->
 
   </main>
-
   <footer>
     &copy; 2023 T.Karmakar
   </footer>
