@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,11 +35,23 @@
       margin-bottom: 20px;
       border-radius: 15px;
       font-size: 0.9em;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     footer {
       background-color: #ffffff00;
-      color: #000000;
+      color: #2a7dc1;
       padding: 1em;
       text-align: center;
     }
@@ -59,18 +72,45 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>C Programming Codes</h1>
   </header>
   <main>
     <section>
-      <h2>Programs</h2>
-      <p><strong>Will be soon avilable! <br>
-        </p>
+      <h2>Program 1</h2>
+      <p><strong>Description:<strong>This program calculates the sum of two numbers.</p>
+      <code><strong>
+        #include&lt;stdio.h&gt;<br>
+        int main() {<br>
+        &nbsp;&nbsp;int num1 = 5, num2 = 10, sum;<br>
+        &nbsp;&nbsp;sum = num1 + num2;<br>
+        &nbsp;&nbsp;printf("Sum: %d", sum);<br>
+        &nbsp;&nbsp;return 0;<br>
+        }
+      </code>
     </section>
-    
-    <!-- Add more sections as needed for your C programming codes -->
+
+    <section>
+      <h2>Program 2</h2>
+      <p><strong>Description:</strong> This program checks whether a number is even or odd.</p>
+      <code>
+        #include&lt;stdio.h&gt;<br>
+        int main() {<br>
+        &nbsp;&nbsp;int num;<br>
+        &nbsp;&nbsp;printf("Enter a number: ");<br>
+        &nbsp;&nbsp;scanf("%d", &num);<br>
+        &nbsp;&nbsp;if(num % 2 == 0)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("Even");<br>
+        &nbsp;&nbsp;else<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("Odd");<br>
+        &nbsp;&nbsp;return 0;<br>
+        }
+      </code>
+    </section>
+
+    <!-- Add more sections with your C programming codes -->
 
   </main>
 
@@ -78,4 +118,5 @@
     &copy; 2023 T.Karmakar
   </footer>
 </body>
+
 </html>
