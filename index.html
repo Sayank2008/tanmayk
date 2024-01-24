@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Add Font Awesome CSS -->
-    <title>Contact Form</title>
-    <style>
+   
+   <style>
+
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; 
-            color: #000000; 
+            background-color: #f4f4f4; 
+            color: #333; 
         }
 
         header {
@@ -26,65 +27,44 @@
         }
 
         h1 {
-            color: #1e5dc2; 
-            text-align: center;
-            padding: 0.5em;
-            font-size: 2em;
-            position: relative;
-        }
-
-        h3 {
-            color: #ffffff; 
+            color: #fff; 
             text-align: left;
             padding: 0.5em;
-            font-size: 2em;
             position: relative;
         }
 
-        h4 {
-            color: #000000; 
-            text-align: center;
-            font-size: 1em;
+        nav {
+            position: absolute;
+            top: 1em;
+            right: 1em;
         }
 
-        form {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #eef6ff;
-            border-radius: 5px;
-        }
+        .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #0d5c91cc;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
+    .button:hover {
+        background-color: rgb(36, 36, 36);
+    }
 
-        .required-label::after {
-            content: " *";
-            color: red;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #1e5dc2;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #0d5c91cc;
+        nav a {
             color: #fff;
+            text-decoration: none;
             padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+            background-color: #0d5c91cc; 
+            transition: background-color 0.3s ease-in-out;
         }
 
-        button:hover {
-            background-color: rgb(36, 36, 36);
+        nav a:hover {
+            background-color: rgb(36, 36, 36); 
         }
 
         footer {
@@ -119,45 +99,23 @@
             background-color: #011625; 
             color: #fff; 
         }
-
     </style>
+    <title>My Website</title>
 </head>
 <body>
-
     <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+        </nav>
         <h2>&nsc;&nbsp;TANMAY KARMAKAR</h2>
-        <h3>Helping People to make <br>them avialable on the web!</h3>
+        <h1>Helping People to make <br>them avialable on the web!</h1>
         <p>&nsc;&nbsp;Hi! there I'm Tanmay, I make websites through HTML & CSS.<br>Localy I'm from Sivasagar, Assam</p>
+        <a href="form.html" class="button">Order a website!</a>
     </header>
 
-    <h1>Website Order Form</h1>
-    <h4>After submmison of this form you will recieve an email frome me according to your details to build a website!</h4>
-
-    <form action="https://script.google.com/macros/s/AKfycbx30ABDvZ7mF0Gz7eXUqWpaxaArGOhYHdgZxoq6DbQ950al0JdPWYvU27T6G6QVcz4/exec" method="post" target="_blank">
-        <label for="name" class="required-label">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="address" class="required-label">Address:</label>
-        <input id="address" name="address" rows="4" required></input>
-
-        <label for="phoneNumber" class="required-label">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" required>
-
-        <label for="email" class="required-label">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="websiteBasedOn" class="required-label">Website Based On:</label>
-        <input type="text" id="websiteBasedOn" name="websiteBasedOn" required>
-
-        <label for="domainNeeded" class="required-label">Domain Needed(.in):</label>
-        <select id="domainNeeded" name="domainNeeded" required>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-        <button type="submit">Submit</button>
-
-    </form>
-
+    
     <footer>
         <div class="social-icons">
             <!-- Add your social media links and email icon here -->
@@ -167,7 +125,5 @@
         </div>
         <p>&copy; 2024 Tanmay Karmakar</p>
     </footer>
-
-
 </body>
 </html>
