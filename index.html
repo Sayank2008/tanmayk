@@ -1,251 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanmay Karmakar</title>
-
-    <!-- Include Poppins font from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Add Font Awesome CSS -->
+    <title>Contact Form</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #fffafa;
-            color: #333;
+            background-color: #ffffff; 
+            color: #000000; 
         }
 
         header {
-            background: linear-gradient(to right, #162a50, #3a6073), url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YyUyMHByb2dyYW1taW5nfGVufDB8fDB8fHww');
+            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AEYmBYQtZ2HtVaiKE6kWTBxMhImaoMiknMJk47O1LhdstTiXYNWgfr2BvkO90sW7DAb8-Meig1h_ncqyYGZW6aN4vLCzvAqitQ=s1600'); /* Replace 'your-background-image.jpg' with the path to your image */
             background-size: cover;
             background-position: center;
-            color: #dfeaff;
-            text-align: center;
-            padding: 1.5em;
-            border-bottom: 2px solid #fff;
+            color: #fff; 
+            text-align: left;
+            padding: 6em;
             position: relative;
         }
 
-        header h1 {
+        h1 {
+            color: #1e5dc2; 
+            text-align: center;
+            padding: 0.5em;
+            font-size: 2em;
+            position: relative;
+        }
+
+        h3 {
+            color: #ffffff; 
+            text-align: left;
+            padding: 0.5em;
+            font-size: 2em;
+            position: relative;
+        }
+
+        h4 {
+            color: #000000; 
+            text-align: center;
             font-size: 1em;
-            margin-bottom: 10px;
-            animation: fadeInUp 1s ease-out;
         }
 
-        .content {
-            padding: 30px;
-            margin: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-out;
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #eef6ff;
+            border-radius: 5px;
         }
 
-        section h2 {
-            color: #162a50;
-            font-size: 1.5em;
-            margin-bottom: 20px;
+        label {
+            display: block;
+            margin-bottom: 8px;
         }
 
-        section p {
-            font-size: 16px;
-            line-height: 1.6;
+        .required-label::after {
+            content: " *";
+            color: red;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
             margin-bottom: 15px;
+            border: 1px solid #1e5dc2;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
-        a {
-            display: inline-block;
+        button {
+            background-color: #0d5c91cc;
+            color: #fff;
             padding: 10px 15px;
-            background-color: #162a50;
-            color: #FFFFFF;
-            text-decoration: none;
-            border-radius: 7px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
-        a:hover {
-            background-color: #9ab8eb;
-            color: #ffffff;
+        button:hover {
+            background-color: rgb(36, 36, 36);
         }
 
         footer {
-            background-color: #162a50;
-            color: #ffffff;
             text-align: center;
             padding: 1em;
-            bottom: 0;
-            width: 100%;
+            background-color: #011625; 
+            color: #fff; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Media Queries */
-        @media only screen and (max-width: 600px) {
-            header {
-                padding: 1em;
-            }
-
-            h1 {
-                font-size: 1.5em;
-            }
-
-            h2 {
-                font-size: 1em;
-            }
-
-            .content {
-                padding: 20px;
-            }
-
-            article,
-            section {
-                padding: 10px;
-            }
-
-            a {
-                padding: 8px 12px;
-            }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
         }
 
-        /* Keyframe Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .social-icons i {
+            transition: color 0.3s ease-in-out;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .social-icons a:hover i {
+            color: #1e5dc2;
         }
+        
 
-        /* Add Swiper Styles */
-        .swiper-container {
-            width: 100%;
-            padding: 20px;
-        }
-
-        .swiper-slide {
+        footer {
             text-align: center;
-            padding: 10px;
+            padding: 1em;
+            background-color: #011625; 
+            color: #fff; 
         }
 
-        .swiper-slide img {
-            width: 100%;
-            border-radius: 8px;
-        }
     </style>
 </head>
-
 <body>
+
     <header>
-        <h1>नमस्ते to Tanmay's site!</h1>
+        <h2>&nsc;&nbsp;TANMAY KARMAKAR</h2>
+        <h3>Helping People to make <br>them avialable on the web!</h3>
+        <p>&nsc;&nbsp;Hi! there I'm Tanmay, I make websites through HTML & CSS.<br>Localy I'm from Sivasagar, Assam</p>
     </header>
 
-    <section class="content" id="image-slider">
-        <h2>My Programming Images (स्लाइड इमेजेस)</h2>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRJUPEejRV63QvNektW0EGMtaky9UHXJqqECnEb7va-Lc7CuBE78LW-qQkYnpjQqYu7q_AvH5SRc_y0-_6k8Mrx7bpHdw=s1600" alt="Image 1">
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQrlI6ku2erjCSg6kdp-u5CZ_fedii-W--88tZ1K4NBBOl_5M93YzulG-jFbCveMzJcOmeieE_znHYIrRquKapOVWokBQ=s1600" alt="Image 2">
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSpkHx1q5AFNWjKyf7d6nr5uzNsWGgS5En9pfGNGwm2CUYkud8fJ3W5ruCWvTiomoMLdakLt-P6hjsqaN0pWg2vx7y0hQ=s1600" alt="Image 3">
-                </div>
-    
-                </div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
+    <h1>Website Order Form</h1>
+    <h4>After submmison of this form you will recieve an email frome me according to your details to build a website!</h4>
 
-    <section class="content" id="about">
-        <h2>About (मेरे बारे में)</h2>
-        <p>
-            Hello, I'm <b>Tanmay Karmakar</b>, currently reading in <b>Class IX</b> at <b>Sri Sundarmal Modern School</b> a
-            tech enthusiast and programmer. I love diving into the world of computer science, always exploring new
-            possibilities and honing my coding skills. My goal is to create innovative solutions that contribute to the
-            ever-evolving field of technology. In this fast-paced tech world, I'm committed to making a meaningful
-            impact through my passion for computer science.
-        </p>
-    </section>
+    <form action="https://script.google.com/macros/s/AKfycbx30ABDvZ7mF0Gz7eXUqWpaxaArGOhYHdgZxoq6DbQ950al0JdPWYvU27T6G6QVcz4/exec" method="post" target="_blank">
+        <label for="name" class="required-label">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <section class="content" id="pdf-solutions">
-        <h2>SEBA Computer Science (E-34) Solutions on PDF (पीडीएफ समाधान)</h2>
-        <p>Explore and download PDF solutions:</p>
-        <ul>
-            <li><a href="solutions.html" target="_blank">Select Class (कक्षा चुनें)</a></li>
-        </ul>
-    </section>
+        <label for="address" class="required-label">Address:</label>
+        <input id="address" name="address" rows="4" required></input>
 
-    <section class="content" id="coding-projects">
-        <h2>Coding Projects (मेरे प्रोजेक्ट)</h2>
-        <p>Explore some of my coding projects below:</p>
-        <ul>
-            <li><a href="#" target="_blank">Web Development</a></li>
-            <p></p>
-            <li><a href="#" target="_blank">C Programs</a></li>
-            <p></p>
-        </ul>
-    </section>
+        <label for="phoneNumber" class="required-label">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
 
-    <section class="content" id="contact">
-        <h2>Contact (संपर्क)</h2>
-        <p>Feel free to reach out! You can contact me via email at: <b><a href="mailto:siv.tanmayk@gmail.com" target="_blank">siv.tanmayk@gmail.com</a></b> or connect with me on Instagram: <b><a href="https://www.instagram.com/prog_tanmay/" target="_blank">prog_tanmay</a></b> I'm always open to discussions, collaborations, or just a friendly chat. Looking forward to hearing from you!</p>
-    </section>
+        <label for="email" class="required-label">Email:</label>
+        <input type="email" id="email" name="email" required>
 
+        <label for="websiteBasedOn" class="required-label">Website Based On:</label>
+        <input type="text" id="websiteBasedOn" name="websiteBasedOn" required>
+
+        <label for="domainNeeded" class="required-label">Domain Needed(.in):</label>
+        <select id="domainNeeded" name="domainNeeded" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <button type="submit">Submit</button>
+
+    </form>
 
     <footer>
-        <p><b>तन्मय Karmakar</b></p>
+        <div class="social-icons">
+            <!-- Add your social media links and email icon here -->
+            <a href="https://www.instagram.com/prog_tanmay" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/SivTanmayk" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:siv.tanmayk@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2024 Tanmay Karmakar</p>
     </footer>
 
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-        // Initialize Swiper
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                600: {
-                    slidesPerView: 2,
-                },
-                900: {
-                    slidesPerView: 3,
-                },
-                1200: {
-                    slidesPerView: 4,
-                },
-            },
-        });
-    </script>
 </body>
 </html>
